@@ -1,0 +1,317 @@
+body {
+    margin: 0 auto;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    color: rgb(29, 28, 28);
+    background-color: rgb(249, 249, 249);
+}
+
+/*
+.table {
+    
+    padding-left: 1%;
+    padding-right: 1%;;
+    max-width: 80vw;
+    max-height: 90vh;
+
+}
+
+td {
+    
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 10px;
+}
+*/
+/* Responsive navigation menu (for mobile devices) */
+@media screen and (max-width: 800px) {
+    #list {
+        width: 100%;
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+
+    table {
+        max-width: 90vw;
+        max-height: 90vh;
+    }
+}
+
+
+/*Generic*/
+.inline {
+    display: inline;
+}
+
+.block {
+    display: block;
+}
+
+.hide {
+    display: none;
+    visibility: collapse;
+}
+
+.row {
+    display: flex;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+    flex: 33%;
+    padding: 10px;
+    border: 10px solid #00000000;
+    box-shadow: 0px 0px 100px rgb(129 127 127 / 26%) inset;
+    min-height: 40px;
+}
+
+
+
+.ctrl {
+    width: 95%;
+    /* height: 20px; */
+    padding: 10px;
+    margin: 0px;
+    margin-right: 0px;
+    font-size: 25px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+
+    background-color: rgba(255, 255, 255, 0.771);
+    color: rgb(0, 0, 0);
+    border-radius: 0px;
+}
+
+
+/*-----*/
+.closeButtonStyle {
+    cursor: pointer;
+    color: transparent;
+    border: 0px solid rgba(0, 0, 0, 0.338);
+    border-radius: 50%;
+    position: relative;
+    translate: 0px -10px;
+    width: 14px;
+    font-size: 10px;
+    /*box-shadow: 2px 5px 8px #88888888;*/
+    box-shadow: -5px -2px 2px #88888888;
+    background: radial-gradient(circle, rgba(0, 36, 0, 0) 0%, rgb(15, 121, 9) 35%, rgb(47, 255, 0) 100%);
+}
+
+.closeButtonStyle:hover {
+    font-weight: bolder;
+    background-color: rgb(235, 0, 0);
+    color: rgba(255, 255, 255, 0);
+    background: radial-gradient(circle, rgba(0, 36, 0, 0) 0%, rgb(121, 9, 9) 35%, rgb(255, 0, 0) 100%);
+    box-shadow: -5px -2px 2px #88888888;
+}
+
+.dtnow {
+    font-size: 8px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.0175);
+    border: 5px solid rgb(0, 0, 0, 0.0175);
+    border-radius: 0px;
+    cursor: auto;
+    vertical-align: bottom;
+
+}
+
+/*TASK*/
+.completedtask {
+    border: 2px solid rgba(30, 30, 30, 0.087);
+    padding: 1px;
+    text-align: center;
+    margin: 1px;
+    position: relative;
+    transform-origin: 50% 0%;
+    max-width: 300px;
+    display:inline-table;
+    cursor: grab;
+    /*
+    box-shadow: -15px -5px 10px 0px #88888888, 0px -20px 0px 0px rgb(0 0 0 / 4%) inset;
+*/
+}
+
+
+.task {
+    border: 1px solid rgba(115, 115, 115, 0.0196);
+    padding: 1px;
+    box-shadow: 5px 5px 6px #88888888;
+    text-align: center;
+    margin: 10px;
+    position: relative;
+    transform-origin: 50% 0%;
+    max-width: 300px;
+    display: inline-table;
+    cursor: grab;
+    box-shadow: -15px -5px 10px 0px #88888888, 0px -20px 0px 0px rgb(0 0 0 / 4%) inset;
+    transition: 500ms linear all;
+}
+
+
+.task {
+    transform: rotate(5deg);
+    
+}
+
+.task:nth-child(2n) {
+    transform: rotate(-9deg);
+}
+
+
+
+.task:nth-child(3n) {
+    transform: rotate(7deg);
+}
+
+.task:nth-child(4n) {
+    transform: rotate(-5deg);
+}
+
+
+
+.task:nth-child(5n) {
+    transform: rotate(9deg);
+}
+
+.task:nth-child(6n) {
+    transform: rotate(-7deg);
+}
+
+
+
+.task:hover,
+.task:nth-child(2n):hover,
+.task:nth-child(3n):hover,
+.task:nth-child(4n):hover,
+.task:nth-child(5n):hover {
+    transform: rotate(0deg);
+    border: 1px solid #00000000;
+    transition: 250ms linear all;
+    text-shadow: 0px 0px 0.5px rgb(0, 0, 0);
+}
+
+/*TASK*/
+
+
+
+.entry {
+    color: rgb(24, 24, 24);
+    text-align: justify;
+    border-radius: 0px;
+    cursor: text;
+
+    /*border: 1px solid rgba(200,200,200,0.5);*/
+    padding: 10px;
+
+}
+
+.button1:hover {
+    background-color: #e74c3c;
+}
+
+
+input[type='checkbox'] {
+    margin: 0px;
+    padding: 0px;
+    border: 10px solid #000;
+    vertical-align: middle;
+    border-radius: 50%;
+
+}
+
+#tasker,
+.taskbar {
+    background-color: rgb(243 255 187 / 0%);
+    margin: 0 auto;
+    width: 95vw;
+    border: 0px solid #75757521;
+    box-shadow: 0px 0px 100px rgb(129 127 127 / 0%) inset;
+    min-height: 40px;
+
+}
+
+.priorityBox {
+    max-width: 50%;
+    width: 50%;
+    height: 200px;
+
+    background-color: rgba(243, 116, 116, 0.054);
+    border: 10px dashed #ff6f5f;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    margin: 10px;
+    position: relative;
+    resize: both;
+    overflow: hidden;
+    box-shadow: -0px -0px 10px 10px rgba(255, 52, 52, 0.162);
+
+}
+
+.priorityBox:nth-child(2n) {
+    background-color: rgba(127, 127, 127, 0.039);
+    border: 10px dashed #c9c9c9;
+    box-shadow: -0px -0px 10px 10px rgba(84, 84, 84, 0.162)
+}
+
+.priorityBox:nth-child(3n) {
+    background-color: rgba(124, 116, 243, 0.054);
+    border: 10px ridge #453ce7;
+}
+
+
+.pin {
+    cursor: pointer;
+    color: transparent;
+    border: 0px solid rgba(0, 0, 0, 0.338);
+    border-radius: 50%;
+    position: relative;
+    width: 14px;
+    font-size: 10px;
+    box-shadow: 2px 5px 8px #88888888;
+    background: radial-gradient(circle, rgba(0, 36, 0, 0) 0%, rgb(15, 121, 9) 35%, rgb(47, 255, 0) 100%);
+
+}
+
+/*scroll bar*/
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+h4 {
+
+    color: rgba(160, 160, 160, 0.955);
+    text-align: center;
+    padding: 10px;
+}
+
+img {
+    width: 280px;
+}
+
+
+
+.nail {
+    float: right;
+}
+
+.bborder{
+    border-bottom:1px solid #000;
+}
