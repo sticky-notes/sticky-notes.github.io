@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="stickynote.css">
+    <title>Sticky Notes R2</title>
+    <style>
+        table { margin: 0 auto; }
+    </style>
+    <script>
+    function dragStart(event) {
+        event.dataTransfer.setData("Text", event.target.id);
+    }
+
+    function allowDrop(event) {
+        event.preventDefault();
+    }
+
+    function drop(event) {
+        event.preventDefault();
+        const data = event.dataTransfer.getData("Text");
+        event.target.appendChild(document.getElementById(data));
+        //document.getElementById(data).style.backgroundColor="rgba(0,0,0,0.01)";
+        //document.getElementById(data).style.transform = 'rotate(0deg)'; 
+
+    }
+
+    function handleEnter(e)
+    {
+        if(e.keyCode === 13){
+            e.preventDefault(); // Ensure it is only this code that runs
+
+            addtask();
+        }
+    }
+
+    function Hammer(t){
+        debugger;
+
+        document.querySelectorAll("#nail").forEach(n=>{
+            if(t.checked == true)
+            {
+                t.parentElement.style.border= '4px solid #333';
+                t.parentElement.style.transform = 'rotate(0deg)'; 
+            }
+        });
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Main -->
+    <div id="main" class="main" style="padding:10px">
+        <!--iframe name="fpage"></iframe-->
+        <table id="list">
+            <tr>
+                <td class="tr1">
+                    <input  id="task-text" type="textarea" class="ctrl" onkeypress="handleEnter(event)" placeholder="Add a note and click + ">
+                </td>
+                <td class="tr1">
+                    <input id="task-button" class="ctrl button1" type="button" value="+" onclick="addtask()">
+                </td>
+                
+            </tr>
+        </table>
+    </div>
+    <!--<sticky-note dataId="1"></sticky-note>-->
+    
+    <div class="taskbar bborder"  ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="tasker"></div>
+    <script src="stickynote.lib.js">
+    </script>
+</body>
+
+</html>
