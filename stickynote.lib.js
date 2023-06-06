@@ -127,7 +127,7 @@ class StickyNotes {
 
     TaskAsHtml(task){
         var status = "";
-        var pin = `<input type="radio" class="nail" id="nail" onchange="Hammer(this)" name="status" value="draft"><input type='button' name="${task.taskid}"  class='closeButtonStyle' value='x'>`;
+        var pin = `<input type='button' name="${task.taskid}"  class='closeButtonStyle' value='x'>`;
         var style = `style="background-color:${task.Color}"`;
         var taskcls = `class="task"`;
         var droppable ="";
